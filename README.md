@@ -14,6 +14,7 @@ You can find a writeup on this webapp's architecture [here](https://medium.com/@
 - [Prerequisites for Google Cloud and Algorithmia](#prerequisites-for-google-cloud-and-algorithmia)
 - [Installation](#installation)
   - [Docker](#using-docker)
+  - [Zeet.co](#using-zeet.co)
   - [VirtualEnv](#using-virtualenv)
   - [Google Colab](#using-google-colab)
 - [Sample Image and Video](#sample-image-and-video)
@@ -70,6 +71,12 @@ docker build -t cartoonize .
 docker run -p 8080:8080 cartoonize
 ```
 
+### Using zeet.co
+![](https://pcdn.wxiou.cn/20210201152104.png)
+![](https://pcdn.wxiou.cn/20210201152156.png)
+![](https://pcdn.wxiou.cn/20210201152249.png)
+![](https://pcdn.wxiou.cn/20210201152335.png)
+![](https://pcdn.wxiou.cn/20210201152414.png)
 
 ### Using `virtualenv`
 
