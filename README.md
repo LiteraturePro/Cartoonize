@@ -70,6 +70,7 @@ docker run -p 8080:8080 cartoonize
 
 ### Using `Zeet.co`
 - https://zeet.co/home
+- CPU and GPU Build Success https://hub.docker.com/u/literature
 ![](https://pcdn.wxiou.cn/20210201152104.png)
 ![](https://pcdn.wxiou.cn/20210201152156.png)
 ![](https://pcdn.wxiou.cn/20210201152249.png)
