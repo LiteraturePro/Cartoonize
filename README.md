@@ -2,10 +2,7 @@
 
 > Convert images and videos into a cartoon!
 
-The webapp is deployed here - https://cartoonize-lkqov62dia-de.a.run.app
-<div style="text-align:center"><img height="100" alt="Powered by Algorithmia" style="border-width:0" src="static/sample_images/algorithmia.jpeg" /></div>
-
-You can find a writeup on this webapp's architecture [here](https://medium.com/@Niraj_pandkar/how-we-built-an-inexpensive-scalable-architecture-to-cartoonize-the-world-8610050f90a0)!
+The webapp is deployed here - https://cartoonize.zeet.app/cartoonize
 
 ---
 
@@ -71,7 +68,8 @@ docker build -t cartoonize .
 docker run -p 8080:8080 cartoonize
 ```
 
-### Using zeet.co
+### Using `Zeet.co`
+- https://zeet.co/home
 ![](https://pcdn.wxiou.cn/20210201152104.png)
 ![](https://pcdn.wxiou.cn/20210201152156.png)
 ![](https://pcdn.wxiou.cn/20210201152249.png)
@@ -158,9 +156,9 @@ python app.py
 
 ## License
 
-1. Copyright © Cartoonizer ([Demo webapp](https://cartoonize-lkqov62dia-de.a.run.app/))
+1. Copyright © Literature ([Demo webapp](https://cartoonize.zeet.app/cartoonize))
 
-    - Authors: [Niraj Pandkar](https://twitter.com/Niraj_pandkar) and [Tejas Mahajan](https://twitter.com/tjdevWorks).
+    - Authors: Literature.
 
     - Licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) 
     - Commercial application is prohibited by license
