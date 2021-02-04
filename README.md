@@ -2,8 +2,8 @@
 
 > Convert images and videos into a cartoon!
 
-The webapp is deployed here - https://cartoonize.zeet.app/cartoonize
-
+The webapp is deployed Zeet.co here - https://cartoonize.zeet.app/cartoonize
+The webapp is deployed Heroku here - https://cartoonize-hk.herokuapp.com/
 ---
 
 ## Contents
@@ -12,6 +12,7 @@ The webapp is deployed here - https://cartoonize.zeet.app/cartoonize
 - [Installation](#installation)
   - [Docker](#using-docker)
   - [Zeet.co](#using-zeet.co)
+  - [Heroku](#using-heroku)
   - [VirtualEnv](#using-virtualenv)
   - [Google Colab](#using-google-colab)
 - [Sample Image and Video](#sample-image-and-video)
@@ -53,7 +54,7 @@ To learn more on how to deploy your model in Algorithmia, check here - https://a
 - Cuda version 10.1
 - OS: Linux (Ubuntu 18.04)
 
-### Using Docker
+### Using `Docker`
 
 The easiest way to get the webapp running is by using the Dockerfile:
 
@@ -71,11 +72,103 @@ docker run -p 8080:8080 cartoonize
 ### Using `Zeet.co`
 - https://zeet.co/home
 - CPU and GPU Build Success https://hub.docker.com/u/literature
+1. Before starting, you need to log in to zeet and log in directly with your Github account.
+
+2. Choose docker image
 ![](https://pcdn.wxiou.cn/20210201152104.png)
+
+3. Choose a free plan.The free plan can only deploy one CPU container, the second one requires payment, the free plan only has CPU, and the paid plan has GPU.
 ![](https://pcdn.wxiou.cn/20210201152156.png)
+
+4. You can go to the address(https://hub.docker.com/r/literature/cartoonize-cpu), of course, you can also compile by yourself.
+- The difference between CPU and CPU_15s is that CPU_15s can only process videos up to 15s, while cpu does not limit the length of the video.
 ![](https://pcdn.wxiou.cn/20210201152249.png)
+
+5. Fill in the image name you want, Zeet.co will automatically pull it and complete the deployment.
+- such as `literature/cartoonize-cpu:cpu`
 ![](https://pcdn.wxiou.cn/20210201152335.png)
+
+6. You can get the deployment process in real time, and click `Visit Active Deployment` after completion Visit your application.
 ![](https://pcdn.wxiou.cn/20210201152414.png)
+
+7. Zeet provides a free container for each user, please don’t abuse it and cherish resources.
+![](https://pcdn.wxiou.cn/20210204131207.png)
+
+### Using `Heroku`
+- https://dashboard.heroku.com/apps
+- There are some differences between the general docker image and the docker image used by Heroku, but I have compiled the image used by Heroku and can use it directly.
+- CPU and GPU for Heroku Build Success https://hub.docker.com/u/literature
+
+1. Create a new app, choose any name, but don’t use the same name as others
+![](https://pcdn.wxiou.cn/20210204131557.png)
+
+2. After entering the app, select `deploy`, and then select `Container Registry`, Pay attention to the following command, and `learn more` on the left, there are many commands you will use, if there is an error, you can check the command yourself
+![](https://pcdn.wxiou.cn/20210204131709.png)
+
+3. I use my own compiled image to deploy, you can use it, or you can compile one yourself.
+- I use my own server for deployment. If you want to deploy a server, you need to make sure that your local network is consistent with the server network so that Heroku can verify your identity. There is no such problem when using local.
+- Make sure your server environment or local environment has `Docker` and `Heroku CLI` installed, If not, please install it first. These two conditions determine whether it is successful. Give two links for reference:
+- [Docker](https://docs.docker.com/get-docker/) 
+- [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install) 
+![](https://pcdn.wxiou.cn/20210204133112.png)
+
+4. Pull the mirror to the local
+
+```
+docker pull literature/cartoonize-cpu:heroku
+```
+
+![](https://pcdn.wxiou.cn/20210204133307.png)
+
+5. Log in to Heroku.If you use the server deployment, you will be given a link, click the link to verify, but the server network and your local network must be the same, if you use the local PC deployment, it will automatically jump, just click verify.
+
+```
+heroku login
+```
+![](https://pcdn.wxiou.cn/20210204133756.png)
+
+6. Logging in to the registry. Heroku runs a container registry on `registry.heroku.com`.
+```
+heroku container:login
+```
+![](https://pcdn.wxiou.cn/20210204133943.png)
+
+7. Pushing an existing image to your Heroku app.
+- Official order
+
+```
+docker tag <image> registry.heroku.com/<app>/<process-type>
+docker push registry.heroku.com/<app>/<process-type>
+```
+
+- Modify it like me, <image> is changed to `literature/cartoonize-cpu:heroku`, and app is changed to the name of the application we created in the first step. `<process-type>` is modified to the type you want to publish. I will modify it to `web` here. For more information, please refer to the official documentation.
+  
+```
+docker tag literature/cartoonize-cpu:heroku registry.heroku.com/cartoonize-hk/web
+docker push registry.heroku.com/cartoonize-hk/web
+```
+![](https://pcdn.wxiou.cn/20210204134701.png)
+![](https://pcdn.wxiou.cn/20210204134732.png)
+
+8. Now we push the image to the Heroku registry, and then load the warehouse image into the application.
+- The parameter behind `-a` is your application name
+```
+heroku container:release web -a cartoonize-hk
+```
+![](https://pcdn.wxiou.cn/20210204135110.png)
+
+9. Launch your app.
+- The parameter behind `-a` is your application name
+```
+heroku open -a cartoonize-hk
+```
+![](https://pcdn.wxiou.cn/20210204135214.png)
+
+- Copy the link to the browser to access
+
+10. Heroku also provides free services to everyone, please don't abuse it.
+
+
 
 ### Using `virtualenv`
 
