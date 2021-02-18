@@ -82,7 +82,7 @@ docker run -p 8080:8080 cartoonize
 3. Choose a free plan.The free plan can only deploy one CPU container, the second one requires payment, the free plan only has CPU, and the paid plan has GPU.
 ![](https://pcdn.wxiou.cn/20210201152156.png)
 
-4. You can go to the address(https://hub.docker.com/r/literature/cartoonize-cpu), of course, you can also compile by yourself.
+4. You can go to the address(https://hub.docker.com/r/literature/cartoonize-cpu/tags), of course, you can also compile by yourself.
 - The difference between CPU and CPU_15s is that CPU_15s can only process videos up to 15s, while cpu does not limit the length of the video.
 ![](https://pcdn.wxiou.cn/20210201152249.png)
 
@@ -239,6 +239,28 @@ python app.py
 #### Note : Sample [Google Colab Notebook](https://colab.research.google.com/drive/1oDhMEVMcsRbe7bt-2A7cDsx44KQpQwuB?usp=sharing) for reference
 
 ---
+
+## API version
+- Use the following docker command to deploy the server
+```
+docker pull literature/cartoonize-cpu:api
+docker run -p 8080:8080 literature/cartoonize-cpu:api
+```
+or
+```
+docker pull literature/cartoonize-gpu:api
+docker run -p 8080:8080 literature/cartoonize-gpu:api
+```
+- The service will run on your local port 8080 or other ports you specify. If you need domain name access, you can act as a proxy.
+- provided that you have installed `docker`. After you deploy correctly, both `GET` and `POST` requests can be accessed. The actual display is as follows
+- `Interface`: `http://your domain/api` or `http://127.0.0.1:8080/api` can be accessed.
+- `Parameter`: image  `value`: a picture
+- `Return value`: the base64 data stream after processing the image
+
+![](https://pcdn.wxiou.cn/20210218162534.png)
+![](https://pcdn.wxiou.cn/20210218155900.png)
+
+
 
 ## Sample Image and Video
 
