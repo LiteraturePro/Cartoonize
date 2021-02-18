@@ -17,6 +17,7 @@ The webapp is deployed Heroku here - https://cartoonize-hk.herokuapp.com/
   - [Heroku](#using-heroku)
   - [VirtualEnv](#using-virtualenv)
   - [Google Colab](#using-google-colab)
+- [API Version](#api-version)
 - [Sample Image and Video](#sample-image-and-video)
 
 ---
@@ -240,7 +241,7 @@ python app.py
 
 ---
 
-## API version
+## API Version
 - Use the following docker command to deploy the server
 ```
 docker pull literature/cartoonize-cpu:api
