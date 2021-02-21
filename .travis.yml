@@ -1,2 +1,5 @@
+language: python
 services:
   - docker
+script:
+- docker build -t cartoonize:latest .
