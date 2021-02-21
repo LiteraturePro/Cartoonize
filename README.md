@@ -8,6 +8,11 @@ The webapp is deployed Heroku here - https://cartoonize-hk.herokuapp.com/
 
 ---
 
+
+## Update
+[Use the associated applications of the model](https://github.com/LiteraturePro/Wx-Photo/)
+
+
 ## Contents
 
 - [Prerequisites for Google Cloud and Algorithmia](#prerequisites-for-google-cloud-and-algorithmia)
