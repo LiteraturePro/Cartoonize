@@ -254,9 +254,9 @@ docker run -p 8080:8080 literature/cartoonize-gpu:api
 ```
 - The service will run on your local port 8080 or other ports you specify. If you need domain name access, you can act as a proxy.
 - provided that you have installed `docker`. After you deploy correctly, both `GET` and `POST` requests can be accessed. The actual display is as follows
-- `Interface`: `http://your domain/api` or `http://127.0.0.1:8080/api` can be accessed.
-- `Parameter`: image  `value`: a picture
-- `Return value`: the base64 data stream after processing the image
+  - `Interface`: `http://your domain/api` or `http://127.0.0.1:8080/api` can be accessed.
+  - `Parameter`: image  `value`: a picture
+  - `Return value`: the base64 data stream after processing the image
 
 ![](https://pcdn.wxiou.cn/20210218162534.png)
 ![](https://pcdn.wxiou.cn/20210218155900.png)
