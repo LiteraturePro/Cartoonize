@@ -1,4 +1,4 @@
-# Cartoonizer
+# Cartoonizer 
 
 > Convert images and videos into a cartoon!
 
