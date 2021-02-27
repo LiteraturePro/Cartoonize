@@ -6,7 +6,7 @@ The webapp is deployed Zeet.co here - https://cartoonize.zeet.app/cartoonize
 
 The webapp is deployed Heroku here - https://cartoonize-hk.herokuapp.com/
 
-The webapp is deployed Aliyun here - https://cartoonize.wxiou.cn/
+The webapp is deployed Aliyun Severless here - https://cartoonize.wxiou.cn/
 
 ---
 
@@ -20,6 +20,7 @@ The webapp is deployed Aliyun here - https://cartoonize.wxiou.cn/
   - [Docker](#using-docker)
   - [Zeet.co](#using-zeet.co)
   - [Heroku](#using-heroku)
+  - [Aliyun Severless](#using-aliyun-severless)
   - [VirtualEnv](#using-virtualenv)
   - [Google Colab](#using-google-colab)
 - [API Version](#api-version)
@@ -176,6 +177,7 @@ heroku open -a cartoonize-hk
 
 10. Heroku also provides free services to everyone, please don't abuse it.
 
+### Using `Aliyun Severless`
 
 
 ### Using `virtualenv`
