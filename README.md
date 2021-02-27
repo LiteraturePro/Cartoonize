@@ -6,6 +6,8 @@ The webapp is deployed Zeet.co here - https://cartoonize.zeet.app/cartoonize
 
 The webapp is deployed Heroku here - https://cartoonize-hk.herokuapp.com/
 
+The webapp is deployed Aliyun here - https://cartoonize.wxiou.cn/
+
 ---
 
 ## Update
