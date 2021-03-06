@@ -10,6 +10,8 @@ The webapp is deployed Aliyun Severless here - https://cartoonize.wxiou.cn/
 
 ---
 
+![](https://pcdn.wxiou.cn/20210306215318.png)
+
 ## Update
 [Use the associated applications of the model](https://github.com/LiteraturePro/Wx-Photo/)
 
