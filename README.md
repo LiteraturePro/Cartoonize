@@ -180,7 +180,49 @@ heroku open -a cartoonize-hk
 10. Heroku also provides free services to everyone, please don't abuse it.
 
 ### Using `Aliyun Severless`
+1. [Register for Aliyun](https://cn.aliyun.com/)
 
+2. Container image service
+![](https://pcdn.wxiou.cn/20210308185043.png)
+
+3. Create a namespace
+![](https://pcdn.wxiou.cn/20210308185205.png)
+
+4. Create image warehouse
+![](https://pcdn.wxiou.cn/20210308185354.png)
+![](https://pcdn.wxiou.cn/20210308185545.png)
+![](https://pcdn.wxiou.cn/20210308185609.png)
+
+5. Name the compiled image as required. Push to warehouse after naming
+- Log in to the warehouse (these commands are available in alicloud)
+![](https://pcdn.wxiou.cn/20210308190525.png)
+
+- Rename the image to the format required by alicloud
+- You can compile by yourself, and I also provide the version for Aliyun Severless on docker hub `docker pull literature/cartoonize-cpu:sf`.
+![](https://pcdn.wxiou.cn/20210308190853.png)
+
+- Push image
+![](https://pcdn.wxiou.cn/20210308191138.png)
+![](https://pcdn.wxiou.cn/20210308191203.png)
+
+6. Open the serverless computing console
+![](https://pcdn.wxiou.cn/20210308191237.png)
+
+7. Create an app
+![](https://pcdn.wxiou.cn/20210308191406.png)
+
+8. Fill in the relevant configuration. The image was just pushed by us
+![](https://pcdn.wxiou.cn/20210308191559.png)
+
+9. Just a moment to deploy, Access test domain name
+![](https://pcdn.wxiou.cn/20210308191836.png)
+![](https://pcdn.wxiou.cn/20210308192111.png)
+
+10. Bind custom domain name . The path must be filled in `/*`
+![](https://pcdn.wxiou.cn/20210308192203.png)
+![](https://pcdn.wxiou.cn/20210308192325.png)
+
+11. Provides many functions, such as memory expansion, concurrency settings, etc., can be modified
 
 ### Using `virtualenv`
 
