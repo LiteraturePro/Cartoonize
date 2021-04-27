@@ -15,6 +15,8 @@ The webapp is deployed Aliyun Severless here - https://cartoonize.wxiou.cn/
 ## Update
 [Use the associated applications of the model](https://github.com/LiteraturePro/Wx-Photo/)
 
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg)](https://www.digitalocean.com/?refcode=7765f4d750f0&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
+
 ## Contents
 
 - [Prerequisites for Google Cloud and Algorithmia](#prerequisites-for-google-cloud-and-algorithmia)
