@@ -326,6 +326,7 @@ docker run -p 8080:8080 literature/cartoonize-gpu:api
 
 ---
 
+  
 ## License
 
 1. Copyright © Literature ([Demo webapp](https://cartoonize.zeet.app/cartoonize))
